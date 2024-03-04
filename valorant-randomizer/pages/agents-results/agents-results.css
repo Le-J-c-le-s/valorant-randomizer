@@ -1,0 +1,265 @@
+@font-face {
+  font-family: tungsten;
+  src: url(/assets/font/FontsFree-Net-Tungsten-Bold.ttf);
+}
+
+@font-face {
+  font-family: aileron-black;
+  src: url(/assets/font/aileron/Aileron-Black.otf);
+}
+
+@font-face {
+  font-family: aileron;
+  src: url(/assets/font/aileron/Aileron-Regular.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: valorant;
+  src: url(/assets/font/Valorant\ Font.ttf);
+}
+
+body {
+  background-color: #eb565b;
+  background-image: url(/assets/images/background-agents-results.svg);
+  background-size: cover;
+}
+
+.back-div {
+  margin-left: 4%;
+  margin-top: 2%;
+}
+
+.back {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  font-family: aileron;
+}
+
+.agents {
+  font-family: tungsten;
+  font-size: 11em;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #2b2b2b;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.agent-name {
+  font-family: tungsten;
+  font-size: 4em;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 200;
+  padding: 5%;
+}
+
+.agent-img {
+  height: 50%;
+}
+
+.agent-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.agent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vh;
+  height: 40vh;
+  background: url(/assets/images/svg-background-card.svg);
+  background-size: 150%;
+  background-position: 500%;
+  background-repeat: no-repeat;
+  transition: 0.5s ease-in-out;
+  transition-property: background-position, border, color;
+}
+
+.player-count {
+  font-size: 1.5em;
+  padding: 1.5em;
+  font-family: aileron;
+  color: white;
+}
+
+.rerandomize-button {
+  font-family: aileron-black;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #2b2b2b;
+  text-decoration: none;
+  border: none;
+  background-color: #ece8e1;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  width: 8%;
+  margin-top: 10%;
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+}
+
+.agent-card .rerandomize-button {
+  display: none;
+}
+
+.agent-card:hover .rerandomize-button {
+  display: block;
+}
+
+.agent-card:hover {
+  background-position: 50%;
+}
+
+/* button */
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3vh;
+  gap: 4vh;
+}
+
+.button-again {
+  font-family: aileron;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #2b2b2b;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-settings {
+  display: flex;
+  justify-content: center;
+  font-family: aileron-black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #2b2b2b;
+  background-color: #ece8e1;
+}
+
+.primary-button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #2b2b2b;
+  font-family: aileron-black;
+  text-transform: uppercase;
+  padding: 0.9em 3em;
+  background: #ece8e1 url(/assets/images/svg-background.svg);
+  background-size: 150%;
+  background-position: 500%;
+  background-repeat: no-repeat;
+  transition: 0.5s ease-in-out;
+  transition-property: background-position, border, color;
+  z-index: 1;
+}
+
+.primary-button {
+  width: 14em;
+}
+
+.primary-button:hover {
+  color: white;
+  background-position: 50%;
+}
+
+.primary-button::before {
+  content: "";
+  position: absolute;
+  background-color: #ece8e1;
+}
+
+.primary-button:hover::before {
+  background-color: #ece8e1;
+}
+
+.primary-button::after {
+  content: "";
+  position: absolute;
+  background-color: #ece8e1;
+}
+
+.button-borders {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.button-borders:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0.9rem);
+  height: 40%;
+  left: -0.5rem;
+  top: -0.5rem;
+  border: 1px solid #ece8e1;
+  border-bottom: 0px;
+  z-index: -1;
+}
+
+.button-borders::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0.9rem);
+  height: 40%;
+  left: -0.5rem;
+  bottom: -0.5rem;
+  border: 1px solid #ece8e1;
+  border-top: 0px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+  .agents {
+    font-size: 5em;
+    margin-top: 10vh;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    margin-bottom: 10vh;
+    gap: 4em;
+  }
+
+  .primary-button {
+    width: 12em;
+    font-size: 1em;
+    padding: 0.9em 2em;
+  }
+
+  .agent-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    background-size: cover;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weapons-results</title>
+    <link rel="stylesheet" href="/pages/weapons-results/weapons-results.css" />
+    <!-- scrpits -->
+    <script
+      type="module"
+      src="/pages/weapons-results/weapons-results.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="back-div">
+      <a href="/index.html" class="back">Back to start</a>
+    </div>
+    <!-- Title -->
+    <div>
+      <h2 class="weapons">weapons</h2>
+    </div>
+    <div></div>
+    <div id="weapons-container"></div>
+    <!-- Money available for next round generation -->
+    <div class="container-again">
+      <button onClick="window.location.reload();" class="button-again">
+        Rerandomize this round
+      </button>
+    </div>
+    <div class="info-next-round">
+      <div class="update-money">
+        <p class="update-money-text">Money available :</p>
+      </div>
+      <!-- Set "money available" -->
+      <div class="spinner-container">
+        <button id="decrement">-</button>
+        <input
+          class="spinner-button"
+          type="number"
+          id="new-money-available"
+          min="100"
+          max="9000"
+          value="100"
+          step="100"
+        />
+        <button id="increment">+</button>
+      </div>
+      <!-- Next round button -->
+      <div class="buttons-container">
+        <div class="button-borders">
+          <a
+            href="/pages/weapons-results/weapons-results.html"
+            id="next-round"
+            class="primary-button"
+            onclick="transvalue()"
+            >Next round</a
+          >
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="info">
+        For shield and utilites it's up to you, manage with the money you have
+        left (I'm too lazy to dev it)
+      </p>
+    </div>
+  </body>
+</html>

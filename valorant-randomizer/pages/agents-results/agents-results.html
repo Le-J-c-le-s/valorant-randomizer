@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agents-results</title>
+    <link rel="stylesheet" href="/pages/agents-results/agents-results.css" />
+  </head>
+  <body>
+    <div class="back-div">
+      <a href="/index.html" class="back">Back to start</a>
+    </div>
+    <!-- Title -->
+    <div>
+      <h2 class="agents">agents</h2>
+    </div>
+    <!-- Generated agents -->
+    <div id="agent-container"></div>
+    <!-- Randomizer button -->
+    <div class="buttons">
+      <button onClick="window.location.reload();" class="button-again">
+        Randomize again
+      </button>
+      <div class="buttons-container">
+        <div class="button-borders">
+          <a
+            href="/pages/weapons-settings/weapons-settings.html"
+            id="randomize-button"
+            class="primary-button"
+            onclick="transvalue()"
+            >randomize weapons</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- scrpits -->
+    <script
+      type="module"
+      src="/pages/agents-results/agents-results.js"
+    ></script>
+  </body>
+</html>

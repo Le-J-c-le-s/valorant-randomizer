@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agents-settings</title>
+    <link rel="stylesheet" href="/pages/agents-settings/agents-setting.css" />
+  </head>
+  <body>
+    <div class="back-div">
+      <a href="/index.html" class="back">Back to start</a>
+    </div>
+    <!-- Title -->
+    <div>
+      <h2 class="agents">agents</h2>
+    </div>
+    <!-- Set "player count" -->
+    <div>
+      <p>Number of players:</p>
+      <div class="spinner-container">
+        <button id="decrement" onclick="stepper(this)"> - </button>
+        <input class="spinner-button" type="number" id="player-count" min="1" max="5" value="1" step="1" />
+        <button id="increment" onclick="stepper(this)"> + </button>
+      </div>
+    </div>
+    <!-- Randomizer button -->
+    </div>
+    <div class="buttons-container">
+      <div class="button-borders">
+        <a
+          href="/pages/agents-results/agents-results.html"
+          id="randomize-button"
+          class="primary-button"
+          onclick="transvalue()"
+          >randomize agents</a
+        >
+      </div>
+    </div>
+    <!-- scripts -->
+    <script src="/pages/agents-settings/agents-settings.js"></script>
+    <script src="/pages/agents-results/agents-results.js"></script>
+  </body>
+</html>
