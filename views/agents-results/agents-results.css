@@ -171,7 +171,7 @@ body {
   font-family: aileron-black;
   text-transform: uppercase;
   padding: 0.9em 3em;
-  background: #ece8e1 url(/assets/images/svg-background.svg);
+  background: #ece8e1 url(../../assets/images/svg-background.svg);
   background-size: 150%;
   background-position: 500%;
   background-repeat: no-repeat;
