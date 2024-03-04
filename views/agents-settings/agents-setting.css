@@ -1,16 +1,16 @@
 @font-face {
   font-family: tungsten;
-  src: url(/assets/font/FontsFree-Net-Tungsten-Bold.ttf);
+  src: url(../../assets/font/FontsFree-Net-Tungsten-Bold.ttf);
 }
 
 @font-face {
   font-family: aileron-black;
-  src: url(/assets/font/aileron/Aileron-Black.otf);
+  src: url(../../assets/font/aileron/Aileron-Black.otf);
 }
 
 @font-face {
   font-family: aileron;
-  src: url(/assets/font/aileron/Aileron-Regular.otf);
+  src: url(../../assets/font/aileron/Aileron-Regular.otf);
 }
 
 * {
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: valorant;
-  src: url(/assets/font/Valorant\ Font.ttf);
+  src: url(../../assets/font/Valorant\ Font.ttf);
 }
 
 body {
