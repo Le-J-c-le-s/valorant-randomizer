@@ -20,5 +20,10 @@ function stepper(btn) {
 
 function transvalue() {
   const valeur = document.getElementById("money-available").value;
-  localStorage.setItem("money-available", valeur);
+  if (parseInt(valeur) <= 9000) {
+    localStorage.setItem("money-available", valeur);
+  } else {
+    e.preventDefault();
+    alert("You've never played the game, 5 is the max, idiot");
+  }
 }

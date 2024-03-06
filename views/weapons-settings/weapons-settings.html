@@ -23,9 +23,9 @@
           class="spinner-button"
           type="number"
           id="money-available"
-          min="100"
+          min="0"
           max="9000"
-          value="100"
+          value="0"
           step="100"
         />
         <button id="increment" onclick="stepper(this)">+</button>
@@ -38,7 +38,7 @@
           href="../weapons-results/weapons-results.html"
           id="randomize-button"
           class="primary-button"
-          onclick="transvalue()"
+          onclick="transvalue(event)"
           >randomize weapons</a
         >
       </div>

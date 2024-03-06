@@ -19,7 +19,12 @@ function stepper(btn) {
 }
 
 // Save player count to local storage
-function transvalue() {
+function transvalue(e) {
   const valeur = document.getElementById("player-count").value;
-  localStorage.setItem("player-count", valeur);
+  if (parseInt(valeur) <= 5) {
+    localStorage.setItem("player-count", valeur);
+  } else {
+    e.preventDefault();
+    alert("You've never played the game, 5 is the max, idiot");
+  }
 }
