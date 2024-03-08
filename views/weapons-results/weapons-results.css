@@ -56,13 +56,13 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 3vh;
+  margin-top: 1vh;
 }
 
 .weapons-card {
   padding: 2em;
   margin: 3em;
-  background-color: white;
+  background-color: #ece8e1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,7 +113,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 20vw;
-  margin-top: 1%;
+  margin-top: 1vh;
 }
 
 p {
@@ -285,6 +285,65 @@ input[type="number"] {
 }
 
 .info {
-  margin: 2%;
+  margin: 1vh;
   opacity: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+  .weapons {
+    font-size: 5em;
+    margin-top: 10vh;
+  }
+
+  .primary-button {
+    width: 12em;
+    font-size: 1em;
+    padding: 0.9em 2em;
+  }
+
+  p {
+    margin-top: 18vh;
+  }
+
+  .back-div {
+    margin-top: 3vh;
+  }
+
+  .back {
+    font-size: 1em;
+  }
+
+  .weapons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-next-round {
+    flex-direction: column;
+    margin-top: 2vh;
+  }
+
+  .update-money {
+    width: unset;
+  }
+
+  .spinner-container {
+    width: unset;
+  }
+
+  .info-next-round {
+    align-items: center;
+  }
+
+  .buttons-container {
+    margin-top: unset;
+  }
+
+  .update-money-text {
+    margin-top: 5vh;
+  }
+
+  .info {
+    margin: 5vh;
+  }
 }

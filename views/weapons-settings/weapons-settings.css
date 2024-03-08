@@ -213,3 +213,38 @@ p {
   border-top: 0px;
   z-index: -1;
 }
+
+@media only screen and (max-width: 600px) {
+  .weapons {
+    font-size: 5em;
+    margin-top: 10vh;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    margin-top: 3vh;
+    gap: 4em;
+  }
+
+  .primary-button {
+    width: 12em;
+    font-size: 1em;
+    padding: 0.9em 2em;
+  }
+
+  .buttons-container {
+    margin-top: 10vh;
+  }
+
+  p {
+    margin-top: 18vh;
+  }
+
+  .back-div {
+    margin-top: 3vh;
+  }
+
+  .back {
+    font-size: 1em;
+  }
+}

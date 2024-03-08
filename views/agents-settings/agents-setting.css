@@ -239,4 +239,12 @@ input[type="number"] {
   p {
     margin-top: 18vh;
   }
+
+  .back-div {
+    margin-top: 3vh;
+  }
+
+  .back {
+    font-size: 1em;
+  }
 }
