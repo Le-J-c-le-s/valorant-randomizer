@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /uploads/
+Allow: /
+
+Sitemap: https://valorant-randomizer.xyz/sitemap.xml

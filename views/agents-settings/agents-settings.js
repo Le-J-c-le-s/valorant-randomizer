@@ -25,6 +25,6 @@ function transvalue(e) {
     localStorage.setItem("player-count", valeur);
   } else {
     e.preventDefault();
-    alert("You've never played the game, 5 is the max, idiot");
+    alert("Have you ever played the game ? 5 is the max, idiot");
   }
 }
