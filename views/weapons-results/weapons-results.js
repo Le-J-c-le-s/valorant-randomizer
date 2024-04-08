@@ -1,27 +1,3 @@
-const stepper = (btn) => {
-  console.log(btn);
-
-  const moneyInput = document.getElementById("new-money-available");
-
-  const step = btn.target.id === "increment" ? 1 : -1;
-  const newValue = parseInt(moneyInput.value) + step * moneyInput.step;
-
-  // set min max limit
-  const limitedValue = Math.min(
-    Math.max(newValue, moneyInput.min),
-    moneyInput.max
-  );
-
-  moneyInput.value = limitedValue;
-};
-
-// make spinner button works
-var decrement = document.getElementById("decrement");
-decrement.addEventListener("click", stepper);
-
-var increment = document.getElementById("increment");
-increment.addEventListener("click", stepper);
-
 let weaponsData;
 // Call to Valorant API for weapons
 await fetch("https://valorant-api.com/v1/weapons")
@@ -33,8 +9,8 @@ await fetch("https://valorant-api.com/v1/weapons")
     console.log(json);
   });
 
-// Get money available from agents-settings
-const moneyAvailable = localStorage.getItem("money-available");
+// Get money available from weapons-settings
+const moneyAvailable = localStorage.getItem("firstMoneyAvailable");
 console.log(moneyAvailable);
 
 // filter "displayName","displayIcon" and "cost"
@@ -130,14 +106,14 @@ finalWeapons.forEach((weapons) => {
   cardElement.classList.add("weapons-card");
 });
 
-// update moneyAvailable
-function refreshPage() {
-  const newMoneyAvailable = document.getElementById(
-    "new-money-available"
-  ).value;
-  localStorage.setItem("money-available", newMoneyAvailable);
-  location.reload(); // reload page
-}
+// uptade money
 
-// refresh on click
-document.getElementById("next-round").addEventListener("click", refreshPage);
+const moneyContainer = document.querySelector(".set-money");
+
+moneyContainer.addEventListener("click", (event) => {
+  if (event.target.classList.contains("primary-button")) {
+    const newMoneyAvailable = event.target.getAttribute("data-value");
+    localStorage.setItem("firstMoneyAvailable", newMoneyAvailable);
+    location.reload(); // recharge la page
+  }
+});

@@ -145,6 +145,53 @@ body {
   z-index: -1;
 }
 
+/* footer */
+footer {
+  background-color: #b84448;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+
+.footer-content {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.info-dev {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.name {
+  font-size: 1em;
+  font-family: aileron;
+  color: white;
+}
+
+.linkedin-img {
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.btn-donation {
+  padding: 0.7em 2em;
+  background-color: #eb565b;
+  text-decoration: none;
+  font-family: aileron;
+  color: #ece8e1;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   .valorant {
     font-size: 2em;

@@ -56,7 +56,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 1vh;
 }
 
 .weapons-card {
@@ -110,10 +109,11 @@ body {
 
 .info-next-round {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1vh 10vw;
+  gap: 3em;
 }
 
 p {
@@ -129,59 +129,11 @@ p {
   width: 33%;
 }
 
-/* spinner button */
-
-/* hide arrow */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  appearance: textfield;
-  text-align: center;
-  border: none;
-  font-size: 2em;
-}
-
-.spinner-container {
+.set-money {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin: 4vh;
-  gap: 2em;
-  width: 33%;
-}
-
-.spinner-button {
-  color: #ece8e1;
-  background-color: #2b2b2b;
-  padding: 0.2em 1.5em;
-  display: flex;
-  justify-content: center;
-}
-
-#increment {
-  background: none;
-  border: none;
-  font-family: aileron-black;
-  font-size: 3em;
-  color: #2b2b2b;
-  width: 1em;
-  cursor: pointer;
-}
-
-#decrement {
-  background: none;
-  border: none;
-  font-family: aileron-black;
-  font-size: 3em;
-  color: #2b2b2b;
-  width: 1em;
-  cursor: pointer;
+  gap: 5vw;
 }
 
 /* button */
@@ -196,7 +148,7 @@ input[type="number"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 33%;
+  margin: 10%;
 }
 
 .button-settings {
@@ -213,6 +165,7 @@ input[type="number"] {
 .primary-button {
   display: flex;
   justify-content: center;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.5em;
@@ -221,16 +174,12 @@ input[type="number"] {
   text-transform: uppercase;
   padding: 0.9em 0em;
   background: #ece8e1 url(../../assets/images/svg-background.svg);
-  background-size: 150%;
   background-position: 500%;
   background-repeat: no-repeat;
   transition: 0.5s ease-in-out;
   transition-property: background-position, border, color;
   z-index: 1;
-}
-
-.primary-button {
-  width: 10em;
+  width: 6em;
 }
 
 .primary-button:hover {
@@ -284,21 +233,75 @@ input[type="number"] {
   z-index: -1;
 }
 
-.info {
-  margin: 1vh;
-  opacity: 60%;
+/* footer */
+footer {
+  background-color: #b84448;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+
+.footer-content {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.info-dev {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.name {
+  font-size: 1em;
+}
+
+.linkedin-img {
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.btn-donation {
+  padding: 0.7em 2em;
+  background-color: #eb565b;
+  text-decoration: none;
+  font-family: aileron;
+  color: #ece8e1;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 600px) {
+  .set-money {
+    flex-direction: row;
+  }
+
   .weapons {
     font-size: 5em;
     margin-top: 10vh;
   }
 
+  .buttons-container {
+    flex-direction: column;
+    margin-top: 3vh;
+    gap: 4em;
+  }
+
   .primary-button {
     width: 12em;
     font-size: 1em;
-    padding: 0.9em 2em;
+    padding: 0.9em 2emw;
+  }
+
+  .buttons-container {
+    margin-top: 9vh;
   }
 
   p {
@@ -311,39 +314,5 @@ input[type="number"] {
 
   .back {
     font-size: 1em;
-  }
-
-  .weapons-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-next-round {
-    flex-direction: column;
-    margin-top: 2vh;
-  }
-
-  .update-money {
-    width: unset;
-  }
-
-  .spinner-container {
-    width: unset;
-  }
-
-  .info-next-round {
-    align-items: center;
-  }
-
-  .buttons-container {
-    margin-top: unset;
-  }
-
-  .update-money-text {
-    margin-top: 5vh;
-  }
-
-  .info {
-    margin: 5vh;
   }
 }

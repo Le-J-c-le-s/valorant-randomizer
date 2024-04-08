@@ -24,47 +24,96 @@
     <div></div>
     <div id="weapons-container"></div>
     <!-- Money available for next round generation -->
-    <div class="container-again">
-      <button onClick="window.location.reload();" class="button-again">
-        Rerandomize this round
-      </button>
-    </div>
     <div class="info-next-round">
       <div class="update-money">
         <p class="update-money-text">Money available :</p>
       </div>
       <!-- Set "money available" -->
-      <div class="spinner-container">
-        <button id="decrement">-</button>
-        <input
-          class="spinner-button"
-          type="number"
-          id="new-money-available"
-          min="0"
-          max="9000"
-          value="0"
-          step="100"
-        />
-        <button id="increment">+</button>
-      </div>
-      <!-- Next round button -->
-      <div class="buttons-container">
-        <div class="button-borders">
-          <a
-            href="./weapons-results.html"
-            id="next-round"
-            class="primary-button"
-            onclick="transvalue(event)"
-            >Next round</a
-          >
+      <div class="set-money">
+        <!-- pistol -->
+        <div class="pistol">
+          <div class="buttons-container">
+            <div class="button-borders">
+              <a
+                data-value="0"
+                class="primary-button"
+                onclick="transvalue(event)"
+                >Pistol <br />
+                ¤0-</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- eco-->
+        <div class="eco">
+          <div class="buttons-container">
+            <div class="button-borders">
+              <a
+                data-value="950"
+                class="primary-button"
+                onclick="transvalue(event)"
+                >Eco <br />
+                ¤950-</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- low buy -->
+        <div class="low-buy">
+          <div class="buttons-container">
+            <div class="button-borders">
+              <a
+                data-value="3500"
+                class="primary-button"
+                onclick="transvalue(event)"
+                >Low buy <br />
+                ¤3500-</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Full buy -->
+        <div class="full-buy">
+          <div class="buttons-container">
+            <div class="button-borders">
+              <a
+                data-value="5500"
+                class="primary-button"
+                onclick="transvalue(event)"
+                >Full buy <br />
+                ¤5500-</a
+              >
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <p class="info">
-        For shield and utilites it's up to you, manage with the money you have
-        left (I'm too lazy to dev it)
-      </p>
+      <div>
+        <p class="info">
+          For shield and utilites it's up to you, manage with the money you have
+          left (I'm too lazy to dev it)
+        </p>
+      </div>
     </div>
   </body>
+  <footer>
+    <div class="footer-content">
+      <div class="info-dev">
+        <p class="name">Created by</p>
+        <p class="name">Jules Chavaroche</p>
+        <a href="https://www.linkedin.com/in/jules-chavaroche-a265a9179/"
+          ><img
+            class="linkedin-img"
+            src="/assets/images/linkedin-logo.svg"
+            alt="linkedin-logo"
+        /></a>
+      </div>
+      <div class="buy-me-a-coffee">
+        <a
+          class="btn-donation"
+          href="https://www.buymeacoffee.com/juleschavaroche"
+          >buy me coffee</a
+        >
+      </div>
+    </div>
+  </footer>
 </html>

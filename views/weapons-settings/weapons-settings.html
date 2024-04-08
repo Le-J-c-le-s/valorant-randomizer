@@ -11,6 +11,9 @@
     />
     <link rel="stylesheet" href="./weapons-settings.css" />
   </head>
+  <!-- scripts -->
+  <script src="./weapons-settings.js"></script>
+  <script src="../pages/weapons-results/weapons-results.js"></script>
   <body>
     <div class="back-div">
       <a href="../../index.html" class="back">Back to start</a>
@@ -20,37 +23,89 @@
       <h2 class="weapons">weapons</h2>
     </div>
     <!-- Set "money avialable" -->
-    <div>
-      <p>Money available</p>
-      <div class="spinner-container">
-        <button id="decrement" onclick="stepper(this)">-</button>
-        <input
-          class="spinner-button"
-          type="number"
-          id="money-available"
-          min="0"
-          max="9000"
-          value="0"
-          step="100"
-        />
-        <button id="increment" onclick="stepper(this)">+</button>
+    <p>how much money do you have ?</p>
+    <div class="set-money">
+      <!-- pistol -->
+      <div class="pistol">
+        <div class="buttons-container">
+          <div class="button-borders">
+            <a
+              data-value="0"
+              class="primary-button"
+              onclick="transvalue(event)"
+              href="../weapons-results/weapons-results.html"
+              >Pistol <br />
+              ¤0-</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- eco-->
+      <div class="eco">
+        <div class="buttons-container">
+          <div class="button-borders">
+            <a
+              data-value="950"
+              class="primary-button"
+              onclick="transvalue(event)"
+              href="../weapons-results/weapons-results.html"
+              >Eco <br />
+              ¤950-</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- low buy -->
+      <div class="low-buy">
+        <div class="buttons-container">
+          <div class="button-borders">
+            <a
+              data-value="3500"
+              class="primary-button"
+              onclick="transvalue(event)"
+              href="../weapons-results/weapons-results.html"
+              >Low buy <br />
+              ¤3500-</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Full buy -->
+      <div class="full-buy">
+        <div class="buttons-container">
+          <div class="button-borders">
+            <a
+              data-value="5500"
+              class="primary-button"
+              onclick="transvalue(event)"
+              href="../weapons-results/weapons-results.html"
+              >Full buy <br />
+              ¤5500-</a
+            >
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Randomizer button -->
-    <div class="buttons-container">
-      <div class="button-borders">
+  </body>
+  <footer>
+    <div class="footer-content">
+      <div class="info-dev">
+        <p class="name">Created by</p>
+        <p class="name">Jules Chavaroche</p>
+        <a href="https://www.linkedin.com/in/jules-chavaroche-a265a9179/"
+          ><img
+            class="linkedin-img"
+            src="/assets/images/linkedin-logo.svg"
+            alt="linkedin-logo"
+        /></a>
+      </div>
+      <div class="buy-me-a-coffee">
         <a
-          href="../weapons-results/weapons-results.html"
-          id="randomize-button"
-          class="primary-button"
-          onclick="transvalue(event)"
-          >randomize weapons</a
+          class="btn-donation"
+          href="https://www.buymeacoffee.com/juleschavaroche"
+          >buy me coffee</a
         >
       </div>
     </div>
-
-    <!-- scripts -->
-    <script src="./weapons-settings.js"></script>
-    <script src="../pages/weapons-results/weapons-results.js"></script>
-  </body>
+  </footer>
 </html>
